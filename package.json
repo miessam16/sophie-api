@@ -1,0 +1,27 @@
+{
+  "name": "sophie-api",
+  "version": "1.0.0",
+  "description": "Restful API for sophie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miessam16/sophie-api.git"
+  },
+  "keywords": [
+    "sophie"
+  ],
+  "author": "Mohamed Essam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miessam16/sophie-api/issues"
+  },
+  "homepage": "https://github.com/miessam16/sophie-api#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "sinon": "^7.2.2"
+  }
+}
