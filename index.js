@@ -3,6 +3,7 @@ const expressValidator = require('express-validator');
 const authRouter = require('./routes/auth.routes');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const authMiddleware = require('./middlewares/auth.middleware');
 
 dotenv.config();
 
@@ -29,3 +30,7 @@ mongoose.connection.on('connected', () => {
 });
 
 app.use('/api/auth', authRouter);
+
+app.get('/test', authMiddleware, (req, res) => {
+    res.json(req.user);
+});

@@ -15,9 +15,9 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-userSchema.statics.isEmailUnique = async function (email) {
+userSchema.statics.isEmailExist = async function (email) {
     const user = await this.where({email: email}).findOne();
-    return user === null;
+    return user !== null;
 };
 
 module.exports = mongoose.model('User', userSchema);
